@@ -1,19 +1,15 @@
-# Especificação de Caso de Uso: Solicitar suporte e melhoria
+# Especificação de Caso de Uso: Solicitar suporte ou melhoria
 
-**ID:** UC21  
-**Requisito Relacionado:** RF019  
-**Atores Principais:** Cidadão  
+Esta especificação segue o formato tabular estruturado.
 
-## Resumo
-Enviar dúvidas, sugestões de melhoria ou solicitações de suporte ao sistema.
-
-## História de Usuário
-**Eu como** Cidadão, 
-**quero** solicitar suporte e melhoria, 
-**para que** eu possa enviar dúvidas, sugestões de melhoria ou solicitações de suporte ao sistema.
-
-## Critérios de Aceitação
-- **Cenário 1: Sucesso na operação.** Dado que o usuário possui os acessos necessários, quando ele tentar solicitar suporte e melhoria, então o sistema deve permitir a operação com sucesso.
-- **Cenário 2: Falha ou acesso negado.** Dado que ocorreu um erro ou o usuário não tem permissão, quando a ação for iniciada, então o sistema deve exibir uma mensagem clara de erro e abortar a operação.
-
-*(Diagrama de atividades omitido para esta especificação textual)*
+| Campo | Descrição |
+| :--- | :--- |
+| **Caso de Uso** | UC21 - Solicitar suporte ou melhoria |
+| **Objetivo** | Permitir que usuários solicitem suporte técnico, inclusão de dados ou sugiram melhorias na plataforma. |
+| **Requisitos Relacionados** | RF019 |
+| **Atores** | Cidadão |
+| **Condição de Entrada** | O usuário (Cidadão) acessa a interface correspondente à funcionalidade. |
+| **Fluxo Principal** | 1. O ator inicia a funcionalidade.<br>2. O sistema apresenta a interface e solicita os dados necessários.<br>3. O ator insere as informações.<br>4. O sistema valida e processa a ação.<br>5. O sistema retorna uma mensagem de sucesso. |
+| **Fluxos Alternativos** | A1. Cancelamento: O ator pode cancelar a ação a qualquer momento antes do processamento, retornando à tela inicial. |
+| **Fluxos de Exceção** | E1. Falha de validação ou permissão: O sistema exibe uma mensagem de erro e aborta a operação. |
+| **Condição de Saída** | O estado do sistema é atualizado e o objetivo é alcançado com sucesso. |
