@@ -1,19 +1,15 @@
 # Especificação de Caso de Uso: Configurar ajustes administrativos
 
-**ID:** UC23  
-**Requisito Relacionado:** RF018  
-**Atores Principais:** Administrador  
+Esta especificação segue o formato tabular estruturado.
 
-## Resumo
-Possuir páginas ou módulos de configuração para ajustes administrativos da plataforma.
-
-## História de Usuário
-**Eu como** Administrador, 
-**quero** configurar ajustes administrativos, 
-**para que** seja possível possuir páginas ou módulos de configuração para ajustes administrativos da plataforma.
-
-## Critérios de Aceitação
-- **Cenário 1: Sucesso na operação.** Dado que o usuário possui os acessos necessários, quando a ação for iniciada, então o sistema deve cumprir o objetivo esperado.
-- **Cenário 2: Falha ou acesso negado.** Dado que ocorreu um erro ou o usuário não tem permissão, quando a ação for tentada, então o sistema deve abortar e exibir uma mensagem correspondente.
-
-*(Diagrama de atividades omitido para esta especificação textual)*
+| Campo | Descrição |
+| :--- | :--- |
+| **Caso de Uso** | UC23 - Configurar ajustes administrativos |
+| **Objetivo** | Possuir páginas ou módulos de configuração para ajustes administrativos da plataforma. |
+| **Requisitos Relacionados** | RF018 |
+| **Atores** | Administrador |
+| **Condição de Entrada** | O usuário (Administrador) acessa a interface correspondente à funcionalidade. |
+| **Fluxo Principal** | 1. O ator inicia a funcionalidade.<br>2. O sistema apresenta a interface e solicita os dados necessários.<br>3. O ator insere as informações.<br>4. O sistema valida e processa a ação.<br>5. O sistema retorna uma mensagem de sucesso. |
+| **Fluxos Alternativos** | A1. Cancelamento: O ator pode cancelar a ação a qualquer momento antes do processamento, retornando à tela inicial. |
+| **Fluxos de Exceção** | E1. Falha de validação ou permissão: O sistema exibe uma mensagem de erro e aborta a operação. |
+| **Condição de Saída** | O estado do sistema é atualizado e o objetivo é alcançado com sucesso. |

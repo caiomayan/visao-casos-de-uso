@@ -1,19 +1,15 @@
 # Especificação de Caso de Uso: Consolidar dados de multiplos programas
 
-**ID:** UC8  
-**Requisito Relacionado:** RF007  
-**Atores Principais:** Servidor  
+Esta especificação segue o formato tabular estruturado.
 
-## Resumo
-Reunir dados de diferentes programas, setores e bases da SEDH em uma plataforma única e organizada.
-
-## História de Usuário
-**Eu como** Servidor, 
-**quero** consolidar dados de multiplos programas, 
-**para que** seja possível reunir dados de diferentes programas, setores e bases da SEDH em uma plataforma única e organizada.
-
-## Critérios de Aceitação
-- **Cenário 1: Sucesso na operação.** Dado que o usuário possui os acessos necessários, quando a ação for iniciada, então o sistema deve cumprir o objetivo esperado.
-- **Cenário 2: Falha ou acesso negado.** Dado que ocorreu um erro ou o usuário não tem permissão, quando a ação for tentada, então o sistema deve abortar e exibir uma mensagem correspondente.
-
-*(Diagrama de atividades omitido para esta especificação textual)*
+| Campo | Descrição |
+| :--- | :--- |
+| **Caso de Uso** | UC8 - Consolidar dados de multiplos programas |
+| **Objetivo** | Reunir dados de diferentes programas, setores e bases da SEDH em uma plataforma única e organizada. |
+| **Requisitos Relacionados** | RF007 |
+| **Atores** | Servidor |
+| **Condição de Entrada** | O usuário (Servidor) acessa a interface correspondente à funcionalidade. |
+| **Fluxo Principal** | 1. O ator inicia a funcionalidade.<br>2. O sistema apresenta a interface e solicita os dados necessários.<br>3. O ator insere as informações.<br>4. O sistema valida e processa a ação.<br>5. O sistema retorna uma mensagem de sucesso. |
+| **Fluxos Alternativos** | A1. Cancelamento: O ator pode cancelar a ação a qualquer momento antes do processamento, retornando à tela inicial. |
+| **Fluxos de Exceção** | E1. Falha de validação ou permissão: O sistema exibe uma mensagem de erro e aborta a operação. |
+| **Condição de Saída** | O estado do sistema é atualizado e o objetivo é alcançado com sucesso. |
