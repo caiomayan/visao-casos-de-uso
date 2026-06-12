@@ -1,6 +1,6 @@
 # Especificação de Caso de Uso: Configurar ajustes administrativos
 
-Esta especificação segue o formato tabular estruturado.
+Esta especificação detalhada mapeia os fluxos da interface e integração conforme as melhores práticas, referenciando ativamente outras funcionalidades.
 
 | Campo | Descrição |
 | :--- | :--- |
@@ -8,8 +8,13 @@ Esta especificação segue o formato tabular estruturado.
 | **Objetivo** | Possuir páginas ou módulos de configuração para ajustes administrativos da plataforma. |
 | **Requisitos Relacionados** | RF018 |
 | **Atores** | Administrador |
-| **Condição de Entrada** | O usuário (Administrador) acessa a interface correspondente à funcionalidade. |
-| **Fluxo Principal** | 1. O ator inicia a funcionalidade.<br>2. O sistema apresenta a interface e solicita os dados necessários.<br>3. O ator insere as informações.<br>4. O sistema valida e processa a ação.<br>5. O sistema retorna uma mensagem de sucesso. |
-| **Fluxos Alternativos** | A1. Cancelamento: O ator pode cancelar a ação a qualquer momento antes do processamento, retornando à tela inicial. |
-| **Fluxos de Exceção** | E1. Falha de validação ou permissão: O sistema exibe uma mensagem de erro e aborta a operação. |
-| **Condição de Saída** | O estado do sistema é atualizado e o objetivo é alcançado com sucesso. |
+| **Condição de Entrada** | O Administrador acessa o módulo 'Configurações de Sistema'. |
+| **Fluxo Principal** | 1. O Administrador seleciona a seção que deseja alterar (Textos Institucionais, Parâmetros de API, Período Letivo/Ano Base).<br>2. O sistema exibe o formulário com os parâmetros gerais carregados em memória.<br>3. O Administrador ajusta as chaves de configuração e salva.<br>4. O sistema escreve as mudanças no banco de dados e limpa o cache global da aplicação para as novas configurações entrarem em vigor. |
+| **Fluxos Alternativos** | Não existem fluxos alternativos definidos para este caso de uso. |
+| **Fluxos de Exceção** | FE01 - Erro de Cache: No passo 4, se o servidor não puder limpar a memória, exibe 'Configuração salva, mas as alterações podem demorar 5 minutos para refletirem no site'. |
+| **Condição de Saída** | O estado do sistema é atualizado e o objetivo foi alcançado com sucesso através da tela/ação final. |
+
+<br>
+<div align="center">
+  <a href="analise_casos_de_uso.md">⬅ Voltar para a Visão Geral de Casos de Uso (Diagrama)</a>
+</div>

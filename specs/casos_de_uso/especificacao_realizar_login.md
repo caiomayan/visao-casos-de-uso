@@ -1,6 +1,6 @@
 # Especificação de Caso de Uso: Realizar login
 
-Esta especificação segue o formato tabular estruturado.
+Esta especificação detalhada mapeia os fluxos da interface e integração conforme as melhores práticas, referenciando ativamente outras funcionalidades.
 
 | Campo | Descrição |
 | :--- | :--- |
@@ -8,8 +8,13 @@ Esta especificação segue o formato tabular estruturado.
 | **Objetivo** | Permitir que usuários realizem login para acessar as áreas internas da plataforma, especialmente dashboards, relatórios, gestão e módulos administrativos. |
 | **Requisitos Relacionados** | RF001 |
 | **Atores** | Cidadão, Servidor, Admin |
-| **Condição de Entrada** | O usuário (Cidadão) acessa a interface correspondente à funcionalidade. |
-| **Fluxo Principal** | 1. O ator inicia a funcionalidade.<br>2. O sistema apresenta a interface e solicita os dados necessários.<br>3. O ator insere as informações.<br>4. O sistema valida e processa a ação.<br>5. O sistema retorna uma mensagem de sucesso. |
-| **Fluxos Alternativos** | A1. Cancelamento: O ator pode cancelar a ação a qualquer momento antes do processamento, retornando à tela inicial. |
-| **Fluxos de Exceção** | E1. Falha de validação ou permissão: O sistema exibe uma mensagem de erro e aborta a operação. |
-| **Condição de Saída** | O estado do sistema é atualizado e o objetivo é alcançado com sucesso. |
+| **Condição de Entrada** | O ator não está autenticado no sistema. |
+| **Fluxo Principal** | 1. O ator acessa a página inicial do sistema e clica em 'Entrar'.<br>2. O sistema redireciona para a tela de autenticação do Clerk.<br>3. O ator informa suas credenciais (E-mail e Senha) ou escolhe o login via provedor externo.<br>4. O Clerk valida as credenciais.<br>5. O sistema recebe o token de autenticação, registra a sessão e redireciona o ator para o painel apropriado. |
+| **Fluxos Alternativos** | FA01 - Esqueci a Senha: No passo 3, o ator clica em 'Esqueci minha senha', e o sistema envia um e-mail de recuperação. |
+| **Fluxos de Exceção** | FE01 - Credenciais Inválidas: No passo 4, se a senha for incorreta, o sistema exibe 'Usuário ou senha inválidos' e permite tentar novamente. |
+| **Condição de Saída** | O estado do sistema é atualizado e o objetivo foi alcançado com sucesso através da tela/ação final. |
+
+<br>
+<div align="center">
+  <a href="analise_casos_de_uso.md">⬅ Voltar para a Visão Geral de Casos de Uso (Diagrama)</a>
+</div>
