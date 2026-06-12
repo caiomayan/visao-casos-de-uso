@@ -1,20 +1,21 @@
 # Especificação de Caso de Uso: Visualizar graficos
 
-Esta especificação detalhada mapeia os fluxos da interface e integração conforme as melhores práticas, referenciando ativamente outras funcionalidades.
+Esta especificação segue a metodologia de tabelas formais completas (Elicitação de Funcionalidades baseada no Diagrama e Documento Base de Requisitos).
 
-| Campo | Descrição |
+| Parâmetro de Especificação | Descrição |
 | :--- | :--- |
-| **Caso de Uso** | UC6 - Visualizar graficos |
-| **Objetivo** | Exibir gráficos para facilitar a interpretação dos dados, incluindo comparações, tendências e variações ao longo do tempo. |
-| **Requisitos Relacionados** | RF005 |
-| **Atores** | Servidor |
+| **Identificador** | UC6 - Visualizar graficos |
+| **Objetivo do Sistema** | Exibir gráficos para facilitar a interpretação dos dados ao longo do tempo. |
+| **Requisito Associado** | RF005 |
+| **Atores Envolvidos** | Servidor |
+| **O que o usuário vê (Elementos de Interface)** | Área central desenhando gráficos de barras (comparativos) e linhas (evolução temporal), com legendas dinâmicas. |
+| **O que o usuário insere (Dados Fornecidos)** | Cliques em botões de filtro gráfico (ex: Mudar para formato 'Pizza') e movimento do mouse sobre os gráficos (efeito Hover) para ler números exatos. |
 | **Condição de Entrada** | O Servidor solicitou a visualização gráfica no Painel. |
-| **Fluxo Principal** | 1. O sistema compila o conjunto atual de dados em arrays apropriados para plotagem.<br>2. O sistema carrega a biblioteca de renderização gráfica (ex: Chart.js ou similar).<br>3. O sistema exibe um gráfico de barras comparativo (Município x Município).<br>4. O sistema exibe um gráfico de linhas temporais mostrando o crescimento dos programas nos últimos 12 meses.<br>5. O Servidor pode passar o mouse (hover) sobre os nós do gráfico para ler os valores exatos. |
-| **Fluxos Alternativos** | FA01 - Alternar Tipo de Gráfico: No passo 3, o ator clica no ícone de engrenagem e troca o gráfico de 'Barras' para 'Pizza' ou 'Dispersão'. |
-| **Fluxos de Exceção** | FE01 - Erro de Renderização: No passo 2, se a biblioteca falhar, o sistema provê um fallback exibindo uma tabela simples em vez do gráfico. |
-| **Condição de Saída** | O estado do sistema é atualizado e o objetivo foi alcançado com sucesso através da tela/ação final. |
+| **Fluxo Principal (Passo a Passo)** | 1. O sistema compila o conjunto atual de dados em arrays para plotagem.<br>2. O sistema carrega a biblioteca de renderização gráfica.<br>3. O sistema exibe um gráfico de barras comparativo entre municípios.<br>4. O sistema exibe um gráfico de linhas mostrando a evolução nos últimos 12 meses.<br>5. O Servidor passa o mouse sobre os gráficos para consultar valores pontuais. |
+| **Fluxos Alternativos / Desvios** | FA01 - Alternar Gráfico: No passo 3, trocar formato de barras para pizza. |
+| **Fluxos de Exceção (Erros e Limites)** | FE01 - Erro de Renderização: Fallback exibindo tabela plana caso o plugin de gráficos não carregue. |
 
 <br>
 <div align="center">
-  <a href="analise_casos_de_uso.md">⬅ Voltar para a Visão Geral de Casos de Uso (Diagrama)</a>
+  <a href="analise_casos_de_uso.md">⬅ Retornar para o Painel Geral do Diagrama de Casos de Uso</a>
 </div>

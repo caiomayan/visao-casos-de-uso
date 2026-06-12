@@ -1,20 +1,21 @@
 # Especificação de Caso de Uso: Emitir relatorio em PDF
 
-Esta especificação detalhada mapeia os fluxos da interface e integração conforme as melhores práticas, referenciando ativamente outras funcionalidades.
+Esta especificação segue a metodologia de tabelas formais completas (Elicitação de Funcionalidades baseada no Diagrama e Documento Base de Requisitos).
 
-| Campo | Descrição |
+| Parâmetro de Especificação | Descrição |
 | :--- | :--- |
-| **Caso de Uso** | UC18 - Emitir relatorio em PDF |
-| **Objetivo** | Permitir a emissão de relatórios em PDF de forma rápida, com base nos filtros e configurações escolhidos pelo usuário. |
-| **Requisitos Relacionados** | RF012 |
-| **Atores** | Servidor |
-| **Condição de Entrada** | O relatório finalizado está na tela aguardando a decisão de exportação. |
-| **Fluxo Principal** | 1. O Servidor clica em 'Baixar como PDF'.<br>2. O sistema envia o HTML consolidado para um serviço de conversão (ex: wkhtmltopdf ou jsPDF).<br>3. O sistema gera o arquivo físico `.pdf`.<br>4. O sistema dispara o download para o navegador do Servidor. |
-| **Fluxos Alternativos** | FA01 - Adicionar Marca d'água: No passo 2, o sistema detecta se é uma versão preliminar e carimba 'Confidencial/Rascunho' no fundo do PDF. |
-| **Fluxos de Exceção** | FE01 - Bloqueio de Popup: No passo 4, se o navegador bloquear o download, o sistema exibe um link estático: 'Clique aqui para baixar seu arquivo'. |
-| **Condição de Saída** | O estado do sistema é atualizado e o objetivo foi alcançado com sucesso através da tela/ação final. |
+| **Identificador** | UC18 - Emitir relatorio em PDF |
+| **Objetivo do Sistema** | Consolidar os dados em arquivo portável e emitir PDF para download rápido. |
+| **Requisito Associado** | RF012 |
+| **Atores Envolvidos** | Servidor |
+| **O que o usuário vê (Elementos de Interface)** | Indicador de Carregamento ('Gerando PDF...') seguido pelas janelas nativas do navegador para indicar onde salvar o arquivo físico no computador. |
+| **O que o usuário insere (Dados Fornecidos)** | Definição opcional do nome do arquivo (ex: Relatorio_Jan2026.pdf) na janela de sistema operacional local. |
+| **Condição de Entrada** | O relatório na tela encontra-se finalizado e o usuário solicitou o download. |
+| **Fluxo Principal (Passo a Passo)** | 1. O ator clica no botão com ícone de PDF.<br>2. O sistema despacha a visualização HTML atual para um conversor backend seguro.<br>3. O backend carimba data, assinatura digital ou hash criptográfico garantindo que é um doc original.<br>4. O backend converte as fontes e vetores para o arquivo binário .pdf real.<br>5. O sistema envia a resposta ao Browser, forçando a janela de download automático no navegador do ator. |
+| **Fluxos Alternativos / Desvios** | FA01 - Adição de Rascunho: O servidor estampa a palavra 'Preliminar' como marca d'água invisível de PDF, caso o período consultado ainda não tenha acabado. |
+| **Fluxos de Exceção (Erros e Limites)** | FE01 - Erro de Biblioteca de Conversão: Exibe 'Falha de Servidor ao Gerar PDF. Tente novamente mais tarde'. |
 
 <br>
 <div align="center">
-  <a href="analise_casos_de_uso.md">⬅ Voltar para a Visão Geral de Casos de Uso (Diagrama)</a>
+  <a href="analise_casos_de_uso.md">⬅ Retornar para o Painel Geral do Diagrama de Casos de Uso</a>
 </div>

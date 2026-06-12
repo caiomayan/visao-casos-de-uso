@@ -1,20 +1,21 @@
 # Especificação de Caso de Uso: Solicitar suporte ou melhoria
 
-Esta especificação detalhada mapeia os fluxos da interface e integração conforme as melhores práticas, referenciando ativamente outras funcionalidades.
+Esta especificação segue a metodologia de tabelas formais completas (Elicitação de Funcionalidades baseada no Diagrama e Documento Base de Requisitos).
 
-| Campo | Descrição |
+| Parâmetro de Especificação | Descrição |
 | :--- | :--- |
-| **Caso de Uso** | UC21 - Solicitar suporte ou melhoria |
-| **Objetivo** | Permitir que usuários solicitem suporte técnico, inclusão de dados ou sugiram melhorias na plataforma. |
-| **Requisitos Relacionados** | RF019 |
-| **Atores** | Cidadão |
-| **Condição de Entrada** | O ator (Cidadão ou até Servidor) encontra um problema ou deseja opinar. |
-| **Fluxo Principal** | 1. O ator acessa o link 'Ajuda e Suporte' (ícone de interrogação flutuante ou rodapé).<br>2. O sistema exibe um formulário de abertura de chamado com Categorias (Dúvida, Sugestão de Melhoria, Reportar Erro).<br>3. O ator preenche o Assunto, descreve o problema e, se quiser, anexa uma captura de tela (print).<br>4. O ator envia a solicitação.<br>5. O sistema registra na fila do administrador e exibe o Número do Ticket na tela. |
-| **Fluxos Alternativos** | FA01 - Base de Conhecimento Rápida: No passo 2, ao digitar o Assunto, o sistema sugere FAQs automaticamente, e o usuário pode fechar o chamado se já estiver respondido ali. |
-| **Fluxos de Exceção** | Não existem fluxos de exceção críticos para este caso de uso. |
-| **Condição de Saída** | O estado do sistema é atualizado e o objetivo foi alcançado com sucesso através da tela/ação final. |
+| **Identificador** | UC21 - Solicitar suporte ou melhoria |
+| **Objetivo do Sistema** | Acesso a Ouvidoria e canais de ajuda técnicos para resolução de dúvidas e melhorias. |
+| **Requisito Associado** | RF019 |
+| **Atores Envolvidos** | Cidadão |
+| **O que o usuário vê (Elementos de Interface)** | Formulário de Abertura de Chamado contendo: Dropdown de Categoria, Caixa de Título (Assunto) e Caixa de Texto Longo (Textarea). |
+| **O que o usuário insere (Dados Fornecidos)** | Seleção da Categoria ('Dúvida de Acesso', 'Erro de Tela'), Escrita do texto explicativo da falha encontrada, Upload de Screenshot opcional. |
+| **Condição de Entrada** | O usuário encontra problemas ou dúvidas de navegação. |
+| **Fluxo Principal (Passo a Passo)** | 1. O ator clica no botão 'Ajuda e Suporte' flutuante na tela.<br>2. O sistema mostra o formulário de ticket da Ouvidoria/Suporte.<br>3. O ator preenche o Assunto e fornece o máximo de detalhes textuais do bug.<br>4. O ator anexa uma imagem da tela (print).<br>5. O ator submete e o sistema confirma com a geração do número do ticket de suporte rastreável. |
+| **Fluxos Alternativos / Desvios** | FA01 - Exibir Autoajuda FAQ: Ao digitar palavras como 'senha' no título, o sistema detecta a palavra e recomenda: 'Veja como redefinir sua senha aqui', interceptando o ticket para o usuário nem precisar enviar. |
+| **Fluxos de Exceção (Erros e Limites)** | Nenhuma validação de exceção. |
 
 <br>
 <div align="center">
-  <a href="analise_casos_de_uso.md">⬅ Voltar para a Visão Geral de Casos de Uso (Diagrama)</a>
+  <a href="analise_casos_de_uso.md">⬅ Retornar para o Painel Geral do Diagrama de Casos de Uso</a>
 </div>
